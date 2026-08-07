@@ -1,0 +1,10 @@
+<script>
+    var url = new URL(location.href);
+    var page = url.searchParams.get("v"); // vivaldi://
+
+    if (page==null){
+        document.write("Param ?v= is needed in URL");
+    }else{
+        top.location = `vivaldi://${page}`;
+    }
+</script>
